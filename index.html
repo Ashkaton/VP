@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Планирование путешествий</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="search-input">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M15.5 15.5 20 20M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z"
+              stroke="currentColor"
+              stroke-width="1.5"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+          <input type="text" placeholder="Регион, место, достопримечательность" />
+        </div>
+        <button class="filter-button">
+          Фильтры
+          <span class="badge">3</span>
+        </button>
+        <div class="topbar-actions">
+          <button class="icon-button" aria-label="Закладки">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M6 4h12a1 1 0 0 1 1 1v15l-7-4-7 4V5a1 1 0 0 1 1-1Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button class="icon-button" aria-label="Профиль">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5" fill="none" />
+              <path
+                d="M4 20a8 8 0 0 1 16 0"
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <div class="logo">RouteFlow</div>
+        <nav class="sidebar-nav">
+          <button class="sidebar-item">
+            <span class="icon">🏔️</span>
+            <span>Обзор</span>
+          </button>
+          <button class="sidebar-item active">
+            <span class="icon">🧭</span>
+            <span>Маршрут</span>
+          </button>
+          <button class="sidebar-item">
+            <span class="icon">🏠</span>
+            <span>Жилье</span>
+          </button>
+          <button class="sidebar-item">
+            <span class="icon">🗺️</span>
+            <span>Гиды</span>
+          </button>
+          <button class="sidebar-item">
+            <span class="icon">🏆</span>
+            <span>Награды</span>
+          </button>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section class="route-panel">
+          <article class="trip-card">
+            <div class="trip-card__image">
+              <div class="trip-card__overlay">
+                <h2>Новое путешествие</h2>
+                <p>12–18 июля · 4 человека</p>
+              </div>
+            </div>
+            <div class="trip-card__meta">
+              <div>
+                <span class="label">Даты</span>
+                <p>12–18 июля 2024</p>
+              </div>
+              <div>
+                <span class="label">Команда</span>
+                <p>4 путешественника</p>
+              </div>
+              <div>
+                <span class="label">Темп</span>
+                <p>Комфортный</p>
+              </div>
+            </div>
+          </article>
+
+          <div class="tabs">
+            <button class="tab active">План маршрута</button>
+            <button class="tab">Детали маршрута</button>
+          </div>
+
+          <div class="day-list">
+            <details class="day-accordion" open>
+              <summary>
+                <div>
+                  <h3>Понедельник, 12 июля</h3>
+                  <p>5 локаций · 2 ч в пути · 48 км</p>
+                </div>
+                <span class="badge muted">День 1</span>
+              </summary>
+              <div class="day-content">
+                <div class="start-point">
+                  <span class="badge">Старт</span>
+                  <div>
+                    <h4>Инсбрук</h4>
+                    <p>Город старта · 08:30</p>
+                  </div>
+                </div>
+                <div class="location-card">
+                  <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=160&q=80" alt="Горное озеро" />
+                  <div>
+                    <h4>Озеро Ахензее</h4>
+                    <p>Рейтинг 4.9 · Сложность: лёгкая</p>
+                    <div class="location-meta">
+                      <span>12 км</span>
+                      <span>2 ч 30 мин</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-card">
+                  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=160&q=80" alt="Тропа" />
+                  <div>
+                    <h4>Тропа Карвендель</h4>
+                    <p>Рейтинг 4.7 · Сложность: средняя</p>
+                    <div class="location-meta">
+                      <span>8 км</span>
+                      <span>1 ч 50 мин</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="hotel-card">
+                  <div>
+                    <h4>Hotel Bergblick</h4>
+                    <p>Шютценштрассе 18, Инсбрук</p>
+                    <span class="label">12–14 июля</span>
+                  </div>
+                  <button class="ghost-button">Детали</button>
+                </div>
+              </div>
+            </details>
+
+            <details class="day-accordion">
+              <summary>
+                <div>
+                  <h3>Вторник, 13 июля</h3>
+                  <p>4 локации · 3 ч в пути · 62 км</p>
+                </div>
+                <span class="badge muted">День 2</span>
+              </summary>
+              <div class="day-content">
+                <div class="start-point">
+                  <span class="badge">Старт</span>
+                  <div>
+                    <h4>Сефельд</h4>
+                    <p>Перевал и обзорные виды · 09:00</p>
+                  </div>
+                </div>
+                <div class="location-card">
+                  <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=160&q=80" alt="Горы" />
+                  <div>
+                    <h4>Плато Веттерштайн</h4>
+                    <p>Рейтинг 4.8 · Сложность: средняя</p>
+                    <div class="location-meta">
+                      <span>14 км</span>
+                      <span>3 ч</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="location-card">
+                  <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=160&q=80" alt="Лес" />
+                  <div>
+                    <h4>Панорама Лойзах</h4>
+                    <p>Рейтинг 4.6 · Сложность: лёгкая</p>
+                    <div class="location-meta">
+                      <span>6 км</span>
+                      <span>1 ч 20 мин</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="hotel-card">
+                  <div>
+                    <h4>Alpenhof Retreat</h4>
+                    <p>Kirchweg 5, Сефельд</p>
+                    <span class="label">14–15 июля</span>
+                  </div>
+                  <button class="ghost-button">Детали</button>
+                </div>
+              </div>
+            </details>
+          </div>
+
+          <div class="info-card">
+            <div>
+              <h4>Совет</h4>
+              <p>Добавляйте заметки к каждой остановке, чтобы команда знала детали.</p>
+            </div>
+            <button class="primary-button">Понятно</button>
+          </div>
+        </section>
+
+        <section class="map-area">
+          <div class="map-frame">
+            <div class="map-header">
+              <h3>Интерактивная карта</h3>
+              <div class="badge">Маршрут активен</div>
+            </div>
+            <div class="map-lines">
+              <span class="route-line line-1"></span>
+              <span class="route-line line-2"></span>
+              <span class="route-line line-3"></span>
+            </div>
+            <div class="map-point point-1">1</div>
+            <div class="map-point point-2">2</div>
+            <div class="map-point point-3">3</div>
+            <div class="map-point point-4">4</div>
+
+            <div class="poi poi-mountain" style="top: 22%; left: 32%;">
+              <span>⛰️</span>
+              <small>Горы</small>
+            </div>
+            <div class="poi poi-food" style="top: 40%; left: 55%;">
+              <span>🥗</span>
+              <small>Еда</small>
+            </div>
+            <div class="poi poi-museum" style="top: 58%; left: 42%;">
+              <span>🏛️</span>
+              <small>Музей</small>
+            </div>
+            <div class="poi poi-hotel" style="top: 70%; left: 65%;">
+              <span>🏨</span>
+              <small>Отель</small>
+            </div>
+            <div class="poi poi-nature" style="top: 30%; left: 70%;">
+              <span>🌲</span>
+              <small>Природа</small>
+            </div>
+
+            <div class="map-controls">
+              <button class="map-control">+</button>
+              <button class="map-control">−</button>
+            </div>
+            <div class="floating-controls">
+              <button class="map-control">🧭</button>
+              <button class="map-control">📍</button>
+              <button class="map-control">🗂️</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
